@@ -27,12 +27,18 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	@Override
 	public void writeSymptoms(Map<String, Integer> symptoms) {
 
-		// next generate output
-		// FileWriter writer = new FileWriter ("result.out");
-		// writer.write("headache: " + "" + "\n");
-		// writer.write("rash: " + "" + "\n");
-		// writer.write("dialated pupils: " + "" + "\n");
-		// writer.close();
+		try {
+			FileWriter writer = new FileWriter ("result.out");
+			
+			for (String i : symptoms.keySet()) {
+				writer.write( i + ": " + symptoms.get(i) + "\n");
+				//writer.write( i +  );
+			}
+
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
