@@ -17,11 +17,10 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	
 	/**
 	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
-
-	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
-	}
+	 * sauvegarde la liste de symptomes ordonnés ainsi que leur nombre d'ocurrence dans un fichier
+	 * 
+	 * @param symptoms est un dictionnaire contnant la liste des symptomes d'un fichier triés par
+	 *        ordre alphabétique avec le nombre d'occurence dans le fichier
 	 */
 
 	@Override
@@ -39,5 +38,4 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			e.printStackTrace();
 		}
 	}
-
 }

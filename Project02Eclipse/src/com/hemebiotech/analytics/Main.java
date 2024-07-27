@@ -6,6 +6,11 @@ import java.util.List;
 
 public class Main {
 
+	/**
+	 * 
+	 * récupère une liste de symptomes à partir d'un fichier, compte le nombre d'occurence de chaque symptomes
+	 * trie les symptomes par ordre alphabétique puis sauvegarde les données dans un fichier
+	 */
 	public static void main(String args[]) throws Exception {
 		Map<String, Integer> symptoms;
 		Map<String, Integer> symptomsSorted;
