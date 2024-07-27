@@ -56,9 +56,6 @@ public class AnalyticsCounter {
 	public Map<String, Integer> sortSymptoms(Map<String, Integer> symptoms) {
 
 	    TreeMap<String, Integer> symptomsSorted = new TreeMap<String, Integer>(symptoms);
-	    for (String s : symptomsSorted.keySet()) {
-	      System.out.print(s + " " + symptomsSorted.get(s) + "\n");
-	    }
 
 		return symptomsSorted;
 	}
@@ -67,18 +64,4 @@ public class AnalyticsCounter {
 		writer.writeSymptoms(symptoms);
 	}
 
-	public static void main(String args[]) throws Exception {
-		Map<String, Integer> symptoms;
-		Map<String, Integer> symptomsSorted;
-		List<String> result = new ArrayList<String>();
-		ISymptomReader reader = new ReadSymptomDataFromFile("com/hemebiotech/symptoms.txt");
-		ISymptomWriter writer = new WriteSymptomDataToFile();
-
-		AnalyticsCounter analyticsCounter = new AnalyticsCounter(reader, writer);
-
-		result = analyticsCounter.getSymptoms();
-		symptoms = analyticsCounter.countSymptoms(result);
-		symptomsSorted = analyticsCounter.sortSymptoms(symptoms);
-		analyticsCounter.writeSymptoms(symptomsSorted);
-	}
 }

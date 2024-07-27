@@ -32,7 +32,6 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			
 			for (String i : symptoms.keySet()) {
 				writer.write( i + ": " + symptoms.get(i) + "\n");
-				//writer.write( i +  );
 			}
 
 			writer.close();
