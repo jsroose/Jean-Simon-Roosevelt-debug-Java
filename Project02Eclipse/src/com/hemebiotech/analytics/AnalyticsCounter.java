@@ -57,12 +57,14 @@ public class AnalyticsCounter {
 	public Map<String, Integer> countSymptoms(List<String> symptoms) {
 		Map<String, Integer> symptomsCount = new HashMap<String, Integer>();
 
+		// on crée un dictionnaire de symptomes sans doublons
 		symptoms.forEach((e) -> {
 			if (!symptomsCount.containsKey(e)) {
 				symptomsCount.put(e, 0);
 			}
 		});
 
+		// on compte le nombre d'occurence de chaque symptome qu'on enregistre dans symptomsCount
 		for (String i : symptomsCount.keySet()) {
 
 			symptoms.forEach((e) -> {
